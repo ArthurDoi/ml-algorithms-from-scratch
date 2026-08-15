@@ -1,9 +1,12 @@
-import tensorflow as tf
 import numpy as np
 
-layer_1 = tf.keras.layers.Dense(units=1, activation='sigmoid')
-x = np.array([[1.0,2.0,3.0]])
-a1 = layer_1(x)
-a2 = a1.numpy()
-print(a1)
-print(a2)
+
+W = np.array([[3],[2]])
+
+X_batch = np.array([ [[4,5], [1,2]],[[3,0],[2,6]]])
+ket_qua = np.matmul(X_batch, W)
+unit =  X_batch.shape[1]
+ket_qua1 = X_batch @ W
+print(ket_qua1)
+print(ket_qua)
+print(unit)
